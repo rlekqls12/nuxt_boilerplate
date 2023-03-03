@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import webpack from 'webpack'
 
 export function getNuxtConfig() {
-  'cross-env NODE_ENV=loc DEVICE=pc nuxt'
+  // 'cross-env NODE_ENV=loc DEVICE=pc nuxt'
   const env = process.env.NODE_ENV.toLowerCase()
   const device = process.env.DEVICE.toLowerCase()
   const port = process.env.PORT
