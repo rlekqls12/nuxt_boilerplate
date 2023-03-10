@@ -1,4 +1,8 @@
-<template></template>
+<template>
+  <div>
+    <Nuxt />
+  </div>
+</template>
 
 <script>
 export default {}

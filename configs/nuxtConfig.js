@@ -39,10 +39,7 @@ export function getNuxtConfig() {
       htmlAttrs: {
         lang: 'ko',
       },
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      ],
+      meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
     },
 
     // CSS 설정
