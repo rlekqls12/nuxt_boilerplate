@@ -49,7 +49,7 @@ export function getNuxtConfig() {
     css: [],
 
     // Plugin 설정
-    plugins: [{ src: `${srcDir}/plugins/axios` }],
+    plugins: [{ src: `~/plugins/axios` }],
 
     // 라우터 및 미들웨어
     router: {
@@ -60,16 +60,16 @@ export function getNuxtConfig() {
         routes.push({
           name: 'custom',
           path: '*',
-          component: `${srcDir}/${device}/pages/404.vue`,
+          component: resolve(__dirname, `~/${device}/pages/404.vue`),
         })
       },
     },
 
     // 폴더 사용자 정의
     dir: {
-      layouts: `${srcDir}/${device}/layouts`,
-      pages: `${srcDir}/${device}/pages`,
-      store: `${srcDir}/${device}/store`,
+      layouts: `${device}/layouts`,
+      pages: `${device}/pages`,
+      store: `${device}/store`,
     },
 
     // 공개 환경변수: 클라이언트/서버
@@ -164,7 +164,7 @@ export function getNuxtConfig() {
     buildDir: `${process.cwd()}/.nuxt-${device}`,
 
     // 최상위 경로 설정
-    rootDir: process.cwd(),
+    rootDir: srcDir,
 
     ...CONFIG[device.toUpperCase()],
   }
