@@ -6,5 +6,8 @@ export default function (ctx) {
     if (!global.$nuxt) {
       global.$nuxt = ctx
     }
+    if (!global.$nuxt.$store) {
+      global.$nuxt.$store = ctx.store
+    }
   }
 }
