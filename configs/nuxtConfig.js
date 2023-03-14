@@ -9,7 +9,7 @@ export function getNuxtConfig() {
   const device = process.env.DEVICE.toLowerCase()
   const port = process.env.PORT
   const envFile = `.env.${device}.${env}`
-  const envFilePath = path.join(__dirname, envFile)
+  const envFilePath = path.join(process.cwd(), envFile)
   dotenv.config({ path: envFilePath })
 
   const srcDir = process.cwd() + '/src/'
